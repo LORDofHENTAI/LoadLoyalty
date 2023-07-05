@@ -1,0 +1,32 @@
+mdb-navbar {
+    height: 2em;
+}
+.navbar{
+  display: flex;
+  background-color: #6440b6;
+  height: 1.26cm;
+  justify-content: space-between;
+  .navbar-logo{
+    font-size: 1.35rem;
+    margin-left: 20px;
+    margin-top: 13px;
+    a{
+      color: white;
+      font-weight: 300;
+      text-decoration: none;
+    }
+  }
+  .navbar-links{
+    button{
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 300;
+      margin-top: 5px;
+      span{
+          margin-right: 5px;
+      }
+    }
+  }
+}

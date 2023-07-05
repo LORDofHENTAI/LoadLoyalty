@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.red-snackbar {
+    --mdc-snackbar-container-color: #F44336!important;
+    position: relative;
+    top: 2.2rem;
+}
+.standart-snackbar {
+    --mdc-snackbar-container-color: rgb(126, 126, 206)!important;
+
+    position: relative;
+    top: 2.2rem;
+}
+.green-snackbar{
+    --mdc-snackbar-container-color: green;
+    position: relative;
+    top: 2.2rem;
+}

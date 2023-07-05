@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Загрузка групп в акцию</h2>
+<mat-dialog-content class="mat-typography">
+    <mat-form-field class="example-full-width" appearance="outline" style="margin-top: 10px;">
+        <mat-label>Идентификатор акции</mat-label>
+        <input matInput [(ngModel)]="actionId" type="number">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close style="background-color: red; color: white;">Отмена</button>
+    <button mat-button [disabled]="!actionId" style="background-color: green; color: white;"
+        (click)="loadAction()">Загрузить</button>
+</mat-dialog-actions>

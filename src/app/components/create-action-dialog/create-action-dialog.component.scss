@@ -1,0 +1,39 @@
+.example-section {
+    margin: 12px 0;
+  }
+  
+  .example-margin {
+    margin: 0 12px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-top: 4px;
+    columns: 2;
+  }
+
+  .action-create-container{
+    display: flex;
+    .input-conteiner{
+      display: flex;
+      flex-direction: column;
+
+    }
+    .selecter-conteiner{
+      margin-left: 15px;
+      mat-slide-toggle{
+        margin-bottom: 10px;
+      }
+      padding: 10px;
+      .select-stores-conteiner{
+        border: 0.3px grey solid;
+        border-radius: 20px;
+        padding: 10px;
+      }
+    }
+  }
+
+  button:disabled,
+button[disabled]{
+    background-color: grey!important;
+}

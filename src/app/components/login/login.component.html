@@ -1,0 +1,17 @@
+<div class="login-conteiner">
+    <div class="login-conteiner-content">
+        <p>Sign in</p>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Login</mat-label>
+            <input matInput [(ngModel)]="loginQuery.login" (keyup.enter)="onClickLogin()">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="loginQuery.password" (keyup.enter)="onClickLogin()">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="onClickLogin()" [disabled]="loadingShow">Sign in</button>
+    </div>
+</div>

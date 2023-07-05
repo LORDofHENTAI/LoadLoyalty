@@ -1,0 +1,25 @@
+.login-conteiner{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2cm;
+    margin-bottom: 20px;
+    .login-conteiner-content{
+        display: flex;
+        padding: 1cm;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.11);
+        border-radius: 35px;
+
+        p{
+            padding-bottom: 20px;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        input, mat-label{
+            font-size: 1.25em;
+        }
+    }
+}
+

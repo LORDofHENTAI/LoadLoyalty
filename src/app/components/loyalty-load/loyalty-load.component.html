@@ -1,0 +1,131 @@
+<div class="main-conteiner">
+    <div class="action-conteiner">
+        <div class="action-control-conteiner">
+            <button mat-raised-button (click)="openDialog()">Создать Акцию</button>
+        </div>
+        <div class="action-table-conteiner">
+            <table>
+                <tr>
+                    <th>
+                        Идентификатор акции
+                    </th>
+                    <th>
+                        Название
+                    </th>
+                    <th>
+                        Дата начала
+                    </th>
+                    <th>
+                        Дата завершения
+                    </th>
+                </tr>
+                <tr *ngFor="let i of discouts">
+                    <td>
+                        {{i.id}}
+                    </td>
+                    <td (click)="showInfo(i.id)" (mouseleave)="hideInfo(i.id)">
+                        {{i.name}}
+                        <div class="action-info-cinteiner" *ngIf="showActionInfo === i.id ">
+                            {{i.name}}
+                            <div class="action-items">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Идентификатор группы
+                                        </td>
+                                        <td>
+                                            Наименование группы
+                                        </td>
+                                        <td>
+                                            Модификатор
+                                        </td>
+                                    </tr>
+                                    <tr *ngFor="let i of ationItems">
+                                        <td>
+                                            {{i.groupId}}
+                                        </td>
+                                        <td>
+                                            {{i.name}}
+                                        </td>
+                                        <td>
+                                            {{i.mod}}
+                                        </td>
+                                    </tr>
+                                </table>
+                                <button mat-raised-button style="background-color: red;"
+                                    (click)="actionDelete(i.id)">Удалить Акцию</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        {{i.dateFrom}}
+                    </td>
+                    <td>
+                        {{i.dateTo}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="action-conteiner">
+        <div class="action-control-conteiner">
+            <div class="input-conteiner">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Группа</mat-label>
+                    <input matInput [(ngModel)]="group" type="text">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Процент</mat-label>
+                    <input matInput [(ngModel)]="percent" type="text">
+                </mat-form-field>
+            </div>
+            <div class="buttot-conteiner">
+                <button mat-raised-button [disabled]="!group || !percent" (click)="addGroup()">Добавить группу</button>
+                <button mat-raised-button (click)="deleteAllGroups()">Очистить</button>
+            </div>
+        </div>
+        <div class="load-table-conteiner">
+            <div class="table-box">
+                <table>
+                    <tr>
+                        <th>
+                            Идентификатор группы
+                        </th>
+                        <th>
+                            Группа
+                        </th>
+                        <th>
+                            Процент
+                        </th>
+                        <th>
+                            Наименование
+                        </th>
+                        <th>
+                            Действие
+                        </th>
+                    </tr>
+                    <tr *ngFor="let g of groups">
+                        <td>
+                            {{g.groupId}}
+                        </td>
+                        <td>
+                            {{g.group}}
+                        </td>
+                        <td>
+                            {{g.percent}}
+                        </td>
+                        <td>
+                            {{g.nameGroup}}
+                        </td>
+                        <td>
+                            <button mat-raised-button (click)="deleteGroup(g.id)">Удалить</button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <button mat-raised-button (click)="openLoadDialog()">Загрузить группы в акцию</button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class='navbar'>
+    <div class="navbar-logo">
+        <a href="#">Action Load</a>
+    </div>
+    <div class="navbar-links">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <span class="material-icons">
+                person
+            </span>
+            <span>Профиль</span>
+            <span class="material-icons">
+                arrow_drop_down
+            </span>
+        </button>
+        <mat-menu #menu="matMenu">
+            <a mat-menu-item>{{userName}}</a>
+            <a mat-menu-item (click)="onClickLogout()">Выйти</a>
+        </mat-menu>
+    </div>
+
+</div>
