@@ -183,6 +183,7 @@ export class LoyaltyLoadComponent implements OnInit {
   }
   ationItems: ActionItemsModel[]
   showActionInfo: string = '';
+  idElem: string = ''
   showInfo(element: any) {
     this.actionService.GetActionItems(new GetActionItemsModel(this.tokenService.getToken(), element)).subscribe({
       next: result => {
@@ -193,6 +194,7 @@ export class LoyaltyLoadComponent implements OnInit {
       }
     })
     this.showActionInfo = element
+    this.idElem = element
   }
   hideInfo(element: any) {
     this.showActionInfo = '';

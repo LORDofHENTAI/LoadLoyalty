@@ -25,37 +25,6 @@
                     </td>
                     <td (click)="showInfo(i.id)" (mouseleave)="hideInfo(i.id)">
                         {{i.name}}
-                        <div class="action-info-cinteiner" *ngIf="showActionInfo === i.id ">
-                            {{i.name}}
-                            <div class="action-items">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            Идентификатор группы
-                                        </td>
-                                        <td>
-                                            Наименование группы
-                                        </td>
-                                        <td>
-                                            Модификатор
-                                        </td>
-                                    </tr>
-                                    <tr *ngFor="let i of ationItems">
-                                        <td>
-                                            {{i.groupId}}
-                                        </td>
-                                        <td>
-                                            {{i.name}}
-                                        </td>
-                                        <td>
-                                            {{i.mod}}
-                                        </td>
-                                    </tr>
-                                </table>
-                                <button mat-raised-button style="background-color: red;"
-                                    (click)="actionDelete(i.id)">Удалить Акцию</button>
-                            </div>
-                        </div>
                     </td>
                     <td>
                         {{i.dateFrom}}
@@ -65,6 +34,36 @@
                     </td>
                 </tr>
             </table>
+            <!-- <div class="action-info-cinteiner" *ngIf="showActionInfo === idElem">
+                <div class="action-items">
+                    <table>
+                        <tr>
+                            <td>
+                                Идентификатор группы
+                            </td>
+                            <td>
+                                Наименование группы
+                            </td>
+                            <td>
+                                Модификатор
+                            </td>
+                        </tr>
+                        <tr *ngFor="let ia of ationItems">
+                            <td>
+                                {{ia.groupId}}
+                            </td>
+                            <td>
+                                {{ia.name}}
+                            </td>
+                            <td>
+                                {{ia.mod}}
+                            </td>
+                        </tr>
+                    </table>
+                    <button mat-raised-button style="background-color: red;" (click)="actionDelete(idElem)">Удалить
+                        Акцию</button>
+                </div>
+            </div> -->
         </div>
     </div>
     <div class="action-conteiner">
