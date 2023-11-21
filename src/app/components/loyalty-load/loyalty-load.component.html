@@ -78,8 +78,21 @@
                     <input matInput [(ngModel)]="percent" type="text">
                 </mat-form-field>
             </div>
+            <div class="input__wrapper">
+                <input name="file" type="file" name="file" id="input__file" class="input input__file"
+                    (change)="selectFile($event)">
+                <label for="input__file" class="input__file-button">
+                    <span class="input__file-icon-wrapper">
+                        <span class="material-icons">
+                            file_download
+                        </span>
+                    </span>
+                    <span class="input__file-button-text">{{selectedFileName}}</span>
+                </label>
+            </div>
             <div class="buttot-conteiner">
-                <button mat-raised-button [disabled]="!group || !percent" (click)="addGroup()">Добавить группу</button>
+                <button mat-raised-button [disabled]="(!group || !percent) && !selectedFile"
+                    (click)="addGroup()">Добавить группу</button>
                 <button mat-raised-button (click)="deleteAllGroups()">Очистить</button>
             </div>
         </div>
